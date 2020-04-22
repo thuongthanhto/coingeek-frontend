@@ -1,0 +1,61 @@
+.languageSelection {
+  .dropdownWrapper {
+    width: 60px;
+    max-width: 100%;
+    > ul {
+      position: relative;
+      padding: 0;
+      margin: 0 !important;
+      list-style-type: none;
+      .listItem {
+        padding: 0;
+        margin: 0;
+        list-style-type: none;
+        > .imgWrapper {
+          padding-right: calc(10px + 0.7em + 0.7em);
+          position: relative;
+          display: block;
+          padding: 5px 10px;
+          line-height: 1;
+          &::after {
+            content: '';
+            vertical-align: middle;
+            display: inline-block;
+            border: 0.35em solid transparent;
+            border-top: 0.5em solid;
+            position: absolute;
+            color: #444;
+
+            right: 10px;
+            top: calc(50% - 0.175em);
+          }
+        }
+        .subMenu {
+          visibility: hidden;
+          position: absolute;
+          top: 100%;
+          right: 0;
+          left: 0;
+          padding: 0;
+          margin: 0;
+          list-style-type: none;
+          z-index: 101;
+          .subListItem {
+            .imgWrapper {
+              display: block;
+              padding: 5px 10px;
+              line-height: 1;
+              img {
+                width: 23px;
+              }
+            }
+          }
+
+          &.actived {
+            visibility: visible;
+          }
+        }
+      }
+    }
+  }
+}

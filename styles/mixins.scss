@@ -1,0 +1,157 @@
+/*********************
+BREAKPOINTS
+*********************/
+
+@mixin breakpoint($point) {
+  @if $point == xs {
+    @media (min-width: 576px) {
+      @content;
+    }
+  } @else if $point == sm {
+    @media (min-width: 768px) {
+      @content;
+    }
+  } @else if $point == md {
+    @media (min-width: 992px) {
+      @content;
+    }
+  } @else if $point == lg {
+    @media (min-width: 1200px) {
+      @content;
+    }
+  } @else if $point == mobile {
+    @media (max-width: 767px) {
+      @content;
+    }
+  } @else {
+    @media (min-width: $point) {
+      @content;
+    }
+  }
+}
+
+.flexCenter {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.gridCenter {
+  display: grid;
+  justify-content: center;
+  align-items: center;
+}
+
+:global {
+  a {
+    color: #000;
+    cursor: pointer;
+    text-decoration: none !important;
+    &:hover {
+      color: #000;
+    }
+    &.email {
+      color: #4a90e2;
+    }
+  }
+
+  .longContent {
+    p {
+      line-height: 1.5rem;
+      margin-bottom: 2.5rem;
+    }
+    a {
+      color: #4a90e2;
+    }
+    blockquote {
+      background: 0 0;
+      padding-top: 0;
+      padding-left: 80px;
+      padding-right: 80px;
+      quotes: '“' '”' '‘' '’';
+      position: relative;
+      line-height: 1.5rem;
+      &::before,
+      &::after {
+        color: #ddd;
+        font-size: 6rem;
+        font-family: Montserrat;
+        display: block;
+        font-weight: 900;
+        position: absolute;
+      }
+      &::before {
+        content: open-quote;
+        height: 0;
+        line-height: 1;
+        left: 0;
+        top: 10px;
+      }
+      &::after {
+        content: close-quote;
+        line-height: 10%;
+        right: 10px;
+        bottom: 10px;
+      }
+    }
+  }
+
+  .order-first {
+    order: -1;
+  }
+
+  .order-last {
+    order: 13;
+  }
+
+  img {
+    max-width: 100%;
+    height: auto;
+  }
+
+  .wrapper {
+    padding: 30px 0;
+  }
+
+  .cgRadius {
+    border-radius: 0 10px;
+  }
+
+  .articleTitle {
+    line-height: 140%;
+    font-size: 1rem;
+    font-weight: 600;
+  }
+
+  @for $i from 1 through 9 {
+    .font0_#{$i} {
+      font-size: #{$i / 10}rem;
+    }
+  }
+  .font0_65 {
+    font-size: 0.65rem;
+  }
+  .font0_75 {
+    font-size: 0.75rem;
+  }
+  .font1_0 {
+    font-size: 1rem;
+  }
+  .font1_15 {
+    font-size: 1.15rem;
+  }
+  .font1_50 {
+    font-size: 1.5rem;
+  }
+  .font-md1_75 {
+    @include breakpoint(md) {
+      font-size: 1.75rem;
+    }
+  }
+
+  @for $i from 3 through 7 {
+    .fontWeight#{$i}00 {
+      font-weight: $i * 100;
+    }
+  }
+}

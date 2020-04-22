@@ -1,0 +1,48 @@
+:global {
+  @keyframes fadeInLeft {
+    0% {
+      opacity: 0;
+      transform: translateX(-100%);
+    }
+    100% {
+      opacity: 1;
+      transform: translateX(0%);
+    }
+  }
+
+  @keyframes fadeInRight {
+    0% {
+      opacity: 0;
+      transform: translateX(100%);
+    }
+    100% {
+      // right: 0;
+      opacity: 1;
+      // margin-right: 0;
+      transform: translateX(0%);
+    }
+  }
+
+  @keyframes moveLeft {
+    0% {
+      transform: translateX(0);
+    }
+    50% {
+      transform: translate(-25%);
+    }
+    100% {
+      transform: translateX(-50%);
+    }
+  }
+  @keyframes moveRight {
+    0% {
+      transform: translateX(0);
+    }
+    50% {
+      transform: translate(15%);
+    }
+    100% {
+      transform: translateX(30%);
+    }
+  }
+}

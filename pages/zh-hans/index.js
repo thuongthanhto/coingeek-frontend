@@ -1,6 +1,6 @@
-import { postFetch } from "../utils/request";
-import { i18n, withTranslation, Router } from "../i18n";
-import Home from "../module/Home";
+import { postFetch } from "../../utils/request";
+import { i18n, withTranslation, Router } from "../../i18n";
+import Home from "../../module/Home";
 
 const HomePage = (props) => {
   return <Home {...props} />;
