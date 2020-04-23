@@ -1,0 +1,27 @@
+@import '../../styles/variables.scss';
+
+.newLetterBlock {
+  padding: 30px 0;
+  background: $linear-light-blue;
+  color: white !important;
+  .title {
+    text-align: center;
+    color: #fff;
+    text-transform: uppercase;
+    font-size: 20px;
+    font-weight: 700;
+    margin-top: 10px;
+    margin-bottom: 10px;
+  }
+  input {
+    background-color: rgba(255, 255, 255, 0.1) !important;
+    color: #fff !important;
+    border: none !important;
+    &::placeholder {
+      color: #fff !important;
+    }
+  }
+  button {
+    margin-top: -50px;
+  }
+}

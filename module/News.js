@@ -1,23 +1,20 @@
 import React from "react";
-import Head from "next/head";
-import { useMediaQuery } from "react-responsive";
-import _isEmpty from "lodash/isEmpty";
 import { useRouter } from "next/router";
+import _isEmpty from "lodash/isEmpty";
+import { useMediaQuery } from "react-responsive";
+import Head from "next/head";
 import Header from "../components/Header";
-import Slider from "../components/Slider";
 import LastestNewsBlock from "../components/LastestNewsBlock";
 import BusinessAndTech from "../components/BusinessAndTech";
-import InterviewsAndFeatures from "../components/InterviewsAndFeatures";
 import FooterHome from "../components/FooterHome";
 import Footer from "../components/Footer";
 
-const Home = ({
+const News = ({
   t,
   data,
   listLastestNewsBlock,
   techNews,
   businessNews,
-  interviewNews,
   headerMenu,
 }) => {
   const router = useRouter();
@@ -25,7 +22,7 @@ const Home = ({
     query: "(max-width: 767px)",
   });
   const style = {
-    paddingTop: isMobile ? "5rem" : "3rem",
+    paddingTop: isMobile ? "8rem" : "5rem",
   };
 
   return (
@@ -45,9 +42,6 @@ const Home = ({
       </Head>
       {!_isEmpty(headerMenu) && <Header headerMenu={headerMenu} t={t} />}
       <div style={style}>
-        {!_isEmpty(data.slider_posts) && (
-          <Slider data={data.slider_posts} t={t} />
-        )}
         {!_isEmpty(data.banner) && (
           <LastestNewsBlock
             t={t}
@@ -62,13 +56,7 @@ const Home = ({
             t={t}
           />
         )}
-        {!_isEmpty(data) && !_isEmpty(interviewNews) && (
-          <InterviewsAndFeatures
-            data={data}
-            interviewNews={interviewNews}
-            t={t}
-          />
-        )}
+        <div style={{ marginBottom: 50 }} />
         {!_isEmpty(data.footer) && (
           <FooterHome footerData={data.footer} t={t} />
         )}
@@ -78,4 +66,4 @@ const Home = ({
   );
 };
 
-export default React.memo(Home);
+export default React.memo(News);

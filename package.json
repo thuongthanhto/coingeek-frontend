@@ -15,6 +15,7 @@
     "embed-js": "^5.0.4",
     "embed-preset-basic": "^5.0.4",
     "express": "^4.17.1",
+    "formik": "^2.1.4",
     "html-react-parser": "^0.10.3",
     "lodash": "^4.17.15",
     "moment": "^2.24.0",

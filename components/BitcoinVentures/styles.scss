@@ -1,0 +1,40 @@
+.formWrap {
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.buttonSubmit {
+  border-radius: 20px;
+  color: #000;
+  border: 1px solid #000;
+  display: inline-block;
+  font-weight: 400;
+  text-align: center;
+  vertical-align: middle;
+  user-select: none;
+  background-color: transparent;
+  padding: 0.375rem 0.75rem;
+  font-size: 1rem;
+  line-height: 1.5;
+  transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out,
+    border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out,
+    -webkit-box-shadow 0.15s ease-in-out;
+  width: 100%;
+  height: calc(1.5em + 0.75rem + 2px);
+  cursor: pointer;
+}
+
+.error {
+  color: #dc3545;
+  border: 1px solid #e9ecef;
+  display: block;
+  width: 100%;
+  height: calc(1.5em + 0.75rem + 2px);
+  padding: 0.375rem 0.75rem;
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.5;
+  background-color: #fff;
+  background-clip: padding-box;
+  border-radius: 0.25rem;
+}

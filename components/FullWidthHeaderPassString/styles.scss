@@ -1,0 +1,23 @@
+@import '../../styles/variables.scss';
+@import '../../styles/mixins.scss';
+
+.fullWidthHeader {
+  background: $cgBlue;
+  background: $linear-light-blue;
+  &.isPaddingTop {
+    @include breakpoint(sm) {
+      padding-top: 30px;
+    }
+  }
+
+  p {
+    margin-bottom: 2rem;
+  }
+
+  > div {
+    outline: none;
+  }
+  &.purple {
+    background: $linear-purple;
+  }
+}
