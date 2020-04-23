@@ -36,5 +36,10 @@
   "sizeUpload": "Select File Proposal to Upload (Maximum file size of 5MB).",
   "projectDescription": "Project Description",
   "errorMessage": "One or more fields have an error. Please check and try again.",
-  "newsletter": "COINGEEK NEWSLETTERS"
-}
+  "newsletter": "COINGEEK NEWSLETTERS",
+  "titleContact": "Have a question, news tip or feedback for the CoinGeek team? Get in touch with us below.",
+  "topic": "Topic",
+  "subject": "Subject",
+  "message": "Message",
+  "typeMessage": "Type your message",
+  "send": "SEND",

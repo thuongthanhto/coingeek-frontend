@@ -1,10 +1,10 @@
 import React from "react";
 import { postFetch } from "../utils/request";
 import { i18n, withTranslation, Router } from "../i18n";
-import Ventures from "../module/Ventures";
+import ContactUs from "../module/ContactUs";
 
-const VenturesPage = (props) => {
-  return <Ventures {...props} />;
+const ContactUsPage = (props) => {
+  return <ContactUs {...props} />;
 };
 
 export const getServerSideProps = async ({ req }) => {
@@ -15,7 +15,7 @@ export const getServerSideProps = async ({ req }) => {
   const [result, resultMenu] = await Promise.all([
     postFetch("/api/collections/get/page", {
       filter: {
-        title_slug: "bitcoin-ventures",
+        title_slug: "contact-us",
         language: currentLanguage,
         published: true,
       },
@@ -47,4 +47,4 @@ export const getServerSideProps = async ({ req }) => {
   };
 };
 
-export default withTranslation("common")(VenturesPage);
+export default withTranslation("common")(ContactUsPage);

@@ -36,5 +36,11 @@
   "sizeUpload": "选择要上传的文件(最大文件大小为5MB).",
   "projectDescription": "项目描述",
   "errorMessage": "一个或多个字段有错误。 请检查并重试。",
-  "newsletter": "COINGEEK简讯"
+  "newsletter": "COINGEEK简讯",
+  "titleContact": "想要向CoinGeek团队咨询问题、提供建议或意见反馈，请通过下方与我们取得联系。",
+  "topic": "Topic",
+  "subject": "主题",
+  "message": "信息",
+  "typeMessage": "信息",
+  "send": "发送"
 }
