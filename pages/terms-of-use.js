@@ -1,9 +1,10 @@
-import { postFetch } from "../../utils/request";
-import { i18n, withTranslation, Router } from "../../i18n";
-import Ventures from "../../module/Ventures";
+import React from "react";
+import { postFetch } from "../utils/request";
+import { i18n, withTranslation, Router } from "../i18n";
+import TermOfUse from "../module/TermOfUse";
 
-const VenturesPage = (props) => {
-  return <Ventures {...props} />;
+const TermOfUsePage = (props) => {
+  return <TermOfUse {...props} />;
 };
 
 export const getServerSideProps = async ({ req }) => {
@@ -14,7 +15,7 @@ export const getServerSideProps = async ({ req }) => {
   const [result, resultMenu] = await Promise.all([
     postFetch("/api/collections/get/page", {
       filter: {
-        title_slug: "bitcoin-ventures",
+        title_slug: "terms-of-use",
         language: currentLanguage,
         published: true,
       },
@@ -46,4 +47,4 @@ export const getServerSideProps = async ({ req }) => {
   };
 };
 
-export default withTranslation("common")(VenturesPage);
+export default withTranslation("common")(TermOfUsePage);

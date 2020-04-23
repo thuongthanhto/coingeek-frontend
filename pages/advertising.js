@@ -1,10 +1,10 @@
 import React from "react";
-import { postFetch } from "../../utils/request";
-import { i18n, withTranslation, Router } from "../../i18n";
-import ContactUs from "../../module/ContactUs";
+import { postFetch } from "../utils/request";
+import { i18n, withTranslation, Router } from "../i18n";
+import Advertising from "../module/Advertising";
 
-const ContactUsPage = (props) => {
-  return <ContactUs {...props} />;
+const AdvertisingPage = (props) => {
+  return <Advertising {...props} />;
 };
 
 export const getServerSideProps = async ({ req }) => {
@@ -15,7 +15,7 @@ export const getServerSideProps = async ({ req }) => {
   const [result, resultMenu] = await Promise.all([
     postFetch("/api/collections/get/page", {
       filter: {
-        title_slug: "contact-us",
+        title_slug: "advertising",
         language: currentLanguage,
         published: true,
       },
@@ -47,4 +47,4 @@ export const getServerSideProps = async ({ req }) => {
   };
 };
 
-export default withTranslation("common")(ContactUsPage);
+export default withTranslation("common")(AdvertisingPage);
