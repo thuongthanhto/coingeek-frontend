@@ -50,4 +50,4 @@ const GridNews = (props) => {
   );
 };
 
-export default React.memo(GridNews);
+export default GridNews;

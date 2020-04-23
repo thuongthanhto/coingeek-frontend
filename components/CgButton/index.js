@@ -31,4 +31,4 @@ CgButton.defaultProps = {
   size: "xs", // ['xs', 'md', 'lg']
 };
 
-export default React.memo(CgButton);
+export default CgButton;

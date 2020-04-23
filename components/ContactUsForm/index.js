@@ -278,4 +278,4 @@ const ContactUsForm = ({ t }) => {
   );
 };
 
-export default React.memo(ContactUsForm);
+export default ContactUsForm;

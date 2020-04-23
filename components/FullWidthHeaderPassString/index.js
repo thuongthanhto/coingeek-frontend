@@ -44,4 +44,4 @@ FullWidthHeaderPassString.defaultProps = {
   isPaddingTop: true,
 };
 
-export default React.memo(FullWidthHeaderPassString);
+export default FullWidthHeaderPassString;

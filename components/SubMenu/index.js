@@ -46,4 +46,4 @@ const SubMenu = ({ items, isActive, activedItem, className, lang }) => {
   );
 };
 
-export default React.memo(SubMenu);
+export default SubMenu;

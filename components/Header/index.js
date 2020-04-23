@@ -254,4 +254,4 @@ const Header = ({ headerMenu, t }) => {
   );
 };
 
-export default React.memo(Header);
+export default Header;

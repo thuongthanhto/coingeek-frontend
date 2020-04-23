@@ -39,4 +39,4 @@ const BlockHeader = (props) => {
   );
 };
 
-export default React.memo(BlockHeader);
+export default BlockHeader;

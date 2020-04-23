@@ -81,4 +81,4 @@ const BusinessAndTech = ({ businessNews, techNews, t }) => {
   );
 };
 
-export default React.memo(BusinessAndTech);
+export default BusinessAndTech;

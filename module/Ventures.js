@@ -41,4 +41,4 @@ const Ventures = ({ headerMenu, data, t }) => {
   );
 };
 
-export default React.memo(Ventures);
+export default Ventures;

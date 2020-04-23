@@ -46,4 +46,4 @@ const FooterHome = ({ footerData, t }) => {
   );
 };
 
-export default React.memo(FooterHome);
+export default FooterHome;

@@ -27,4 +27,4 @@ const CgLink = (props) => {
   );
 };
 
-export default React.memo(CgLink);
+export default CgLink;

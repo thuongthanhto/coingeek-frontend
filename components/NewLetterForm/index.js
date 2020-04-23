@@ -75,4 +75,4 @@ const NewLetterForm = ({ t }) => {
   );
 };
 
-export default React.memo(NewLetterForm);
+export default NewLetterForm;

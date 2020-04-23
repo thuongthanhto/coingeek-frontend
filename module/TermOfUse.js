@@ -41,4 +41,4 @@ const TermOfUse = ({ headerMenu, data, t }) => {
   );
 };
 
-export default React.memo(TermOfUse);
+export default TermOfUse;

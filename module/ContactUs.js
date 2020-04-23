@@ -41,4 +41,4 @@ const ContactUs = ({ headerMenu, data, t }) => {
   );
 };
 
-export default React.memo(ContactUs);
+export default ContactUs;

@@ -102,4 +102,4 @@ const LanguagesSelection = (props) => {
   );
 };
 
-export default React.memo(LanguagesSelection);
+export default LanguagesSelection;

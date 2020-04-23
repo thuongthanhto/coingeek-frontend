@@ -25,4 +25,4 @@ const BitcoinVentures = ({ result, t }) => {
   );
 };
 
-export default React.memo(BitcoinVentures);
+export default BitcoinVentures;

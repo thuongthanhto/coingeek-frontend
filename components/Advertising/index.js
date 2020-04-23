@@ -15,4 +15,4 @@ const Advertising = ({ result }) => {
   );
 };
 
-export default React.memo(Advertising);
+export default Advertising;

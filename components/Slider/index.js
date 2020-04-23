@@ -139,4 +139,4 @@ const Slider = ({ data, t }) => {
   );
 };
 
-export default React.memo(Slider);
+export default Slider;

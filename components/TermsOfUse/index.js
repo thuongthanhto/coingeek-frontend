@@ -17,4 +17,4 @@ const TermsOfUse = ({ result, t }) => {
   );
 };
 
-export default React.memo(TermsOfUse);
+export default TermsOfUse;

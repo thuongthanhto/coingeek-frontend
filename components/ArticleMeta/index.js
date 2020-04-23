@@ -15,4 +15,4 @@ const ArticleMeta = (props) => {
   );
 };
 
-export default React.memo(ArticleMeta);
+export default ArticleMeta;

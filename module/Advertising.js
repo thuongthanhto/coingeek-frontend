@@ -41,4 +41,4 @@ const Advertising = ({ headerMenu, data, t }) => {
   );
 };
 
-export default React.memo(Advertising);
+export default Advertising;

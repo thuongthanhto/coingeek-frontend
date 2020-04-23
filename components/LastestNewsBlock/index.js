@@ -113,4 +113,4 @@ LastestNewsBlock.defaultProps = {
   isVerticle: false,
 };
 
-export default React.memo(LastestNewsBlock);
+export default LastestNewsBlock;
