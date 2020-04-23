@@ -1,0 +1,118 @@
+@import '../../styles/variables.scss';
+@import '../../styles/mixins.scss';
+@import '../../styles/animation.scss';
+
+:global {
+  .swiper-pagination {
+    .swiper-pagination-bullet {
+      width: 10px;
+      height: 10px;
+      border-radius: 0 3px;
+      margin: 0 3px !important;
+      background-color: $white;
+    }
+    .swiper-pagination-bullet-active {
+      background: $linear-light-blue;
+    }
+  }
+  .swiper-container {
+    overflow: unset;
+  }
+  @include breakpoint(lg) {
+    .swiper-container {
+      overflow: hidden;
+    }
+  }
+}
+
+.sliderWrapper {
+  position: relative;
+  padding: 30px 0;
+  background: url(https://coingeek.com/wp-content/themes/cg_understrap/assets/images/CG_Homepage-3-BGFlat.jpg)
+    no-repeat top center $medium-gray;
+  background-size: 100% auto;
+  overflow: hidden;
+  &::before,
+  &::after {
+    position: absolute;
+    content: '';
+    bottom: 0;
+    width: 200%;
+    background-repeat: repeat-x;
+    background-position: 50% calc(100% + 7px);
+    background-size: 50%;
+  }
+  &::before {
+    right: 0;
+    opacity: 0.4;
+    height: 140px;
+    background-size: 30%;
+    background-image: url(https://front-end-noobs.com/jecko/img/wave-bot.png);
+    animation: moveRight 12s cubic-bezier(0.36, 0.45, 0.63, 0.53) infinite;
+  }
+  &::after {
+    left: 0;
+    opacity: 0.95;
+    height: 160px;
+    background-image: url(https://front-end-noobs.com/jecko/img/wave-mid.png);
+    animation: moveLeft 30s cubic-bezier(0.36, 0.45, 0.63, 0.53) infinite;
+  }
+  .sliderHeader {
+    .firstDivider {
+      border-right: 1px solid white;
+    }
+    .customLogoLink {
+      margin-right: 20px;
+      max-width: 7.5rem;
+      img {
+        max-width: 100%;
+      }
+    }
+  }
+}
+
+.sliderItem {
+  position: relative;
+  display: none;
+  float: left;
+  width: 100%;
+  margin-right: -100%;
+  backface-visibility: hidden;
+  transition: transform 0.6s ease-in-out;
+  opacity: 0;
+  transition-property: opacity;
+  transform: none;
+  .sliderImage {
+    transform: translateX(1000px);
+    transition: all 0.8s ease-in-out;
+    z-index: -2;
+  }
+  .sliderContent {
+    width: 100%;
+    z-index: 1;
+    margin-top: -20px;
+    opacity: 0;
+    transition: all 0.75s ease;
+    margin-left: -1000px !important;
+    @include breakpoint(xs) {
+      width: 120%;
+      z-index: 1;
+      margin-top: 0;
+    }
+    @include breakpoint(sm) {
+      padding: 1.5rem;
+    }
+  }
+
+  &.carouselActive {
+    z-index: 1;
+    opacity: 1;
+    .sliderImage {
+      transform: translateX(0);
+    }
+    .sliderContent {
+      margin-left: 0 !important;
+      opacity: 1;
+    }
+  }
+}

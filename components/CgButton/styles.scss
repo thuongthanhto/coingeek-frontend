@@ -1,0 +1,24 @@
+@import '../../styles/variables.scss';
+
+.cgButton {
+  border-radius: 30px;
+  font-size: 0.7rem;
+  font-weight: 500;
+  border-style: none;
+  text-transform: uppercase;
+  letter-spacing: 0.0625rem;
+  &.linearYellow {
+    background: $linear-yellow;
+    color: #fff;
+    &:hover {
+      background: $linear-white;
+      border: 1px solid #fac161;
+      color: #f7961c;
+    }
+  }
+  &.sizeXS {
+    height: 2.25rem;
+    width: 10rem;
+    padding: 0.3125rem 0.625rem;
+  }
+}

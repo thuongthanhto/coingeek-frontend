@@ -1,0 +1,32 @@
+@import '../../styles/variables.scss';
+
+.articleMeta {
+  font-size: 0.65rem;
+  text-transform: uppercase;
+  font-weight: 300;
+  margin: 0.5rem 0;
+  .category {
+    padding-left: 0.5rem;
+    position: relative;
+    &::before {
+      content: '';
+      left: 0;
+      width: 2px;
+      height: 120%;
+      position: absolute;
+      top: -10%;
+      background: $linear-light-blue;
+    }
+  }
+  .date {
+    padding-left: 0.5rem;
+    color: $light-blue;
+  }
+  &.isLarge {
+    font-size: 1rem;
+    font-weight: 700;
+    .date {
+      font-weight: 400;
+    }
+  }
+}
