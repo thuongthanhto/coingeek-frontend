@@ -62,8 +62,7 @@ const LanguagesSelection = (props) => {
 
   const handleChange = (item) => {
     setState({ activedLang: item });
-
-    i18n.changeLanguage(i18n.language === "en" ? "zh-hans" : "en");
+    i18n.changeLanguage(lang === "en" ? "zh-hans" : "en");
   };
 
   return (

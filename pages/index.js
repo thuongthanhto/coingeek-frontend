@@ -3,6 +3,7 @@ import { i18n, withTranslation, Router } from "../i18n";
 import Home from "../module/Home";
 
 const HomePage = (props) => {
+  console.log(props.t("title"));
   return <Home {...props} />;
 };
 
@@ -102,6 +103,8 @@ export const getServerSideProps = async ({ req }) => {
   if (resultMenu.entries) {
     headerMenu = resultMenu.entries;
   }
+
+  await req.i18n.reloadResources();
 
   return {
     props: {
